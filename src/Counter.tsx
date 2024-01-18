@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 // import "./Counter.module.css";
-// import s from "./Counter.module.css";
+import s from "./Counter.module.css";
 
 const Counter = () => {
   const count = 0;
@@ -20,11 +20,16 @@ const Counter = () => {
   };
 
   return (
-    <div>
-      <h3>Cчетчик: {changeCount}</h3>
-      <br></br>
-      <button onClick={decrementCount}>Уменьшить</button>
-      <button onClick={incrementCount}>Увеличить</button>
+    <div className={s.counter}>
+      <h3 className={s.header}>Cчётчик: {changeCount}</h3>
+      <nav>
+        <button className={s.button} onClick={decrementCount}>
+          Уменьшить
+        </button>
+        <button className={s.button} onClick={incrementCount}>
+          Увеличить
+        </button>
+      </nav>
     </div>
   );
 };
