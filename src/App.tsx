@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Profile from "./Profile";
+import Counter from "./Counter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Profile />
+      <hr></hr>
+      <Counter />
     </div>
   );
 }
 
 export default App;
+
+export type userDataType = {
+  picture: string;
+  name: string;
+  bio: string;
+  author: string;
+  citation: string;
+  hobbies: string[];
+};
+
+export const userData: userDataType = {
+  picture: "./img/IvanIvanov.jpg",
+  name: "Иван Иванов",
+  bio: "Популярный актёр",
+  author: "А. А. Милн",
+  citation: "некоторые люди говорят с животными",
+  hobbies: ["Чтение", "Плавание", "Искусство"],
+};
